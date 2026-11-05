@@ -1,27 +1,32 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Mats2208/MCP-Packet-Tracer/main/demo/banner.png?v=2" alt="Packet Tracer MCP — describe a network and watch it build itself in Cisco Packet Tracer" width="100%"/>
+<img src="demo/banner.png" alt="Packet Tracer MCP — Otomatisasi Cisco Packet Tracer dengan AI" width="100%"/>
 
-**Describe a network in plain words. Your AI plans it, validates it, and builds it live in Cisco Packet Tracer — then pings it to prove it works.**
+# 🚀 Cisco Packet Tracer MCP Server
+### Kendalikan, Bangun, dan Analisis Jaringan Cisco Packet Tracer Secara Otomatis Menggunakan AI
 
-<sub>Install it by asking your agent: <i>"Install the Packet Tracer MCP from github.com/Mats2208/MCP-Packet-Tracer and set everything up for me."</i></sub>
+**Jelaskan kebutuhan jaringan Anda dalam bahasa sehari-hari. AI akan merancang topologi, memvalidasi aturan teknis, menyusun konfigurasi IOS CLI, membangun topologi secara langsung (*live deploy*) di Cisco Packet Tracer, hingga memverifikasi koneksi dengan pengujian ping dan capture paket!**
 
-[![PyPI](https://img.shields.io/pypi/v/packet-tracer-mcp?style=flat-square&logo=pypi&logoColor=white&color=blue&label=pypi)](https://pypi.org/project/packet-tracer-mcp/)
-[![Python](https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![MCP](https://img.shields.io/badge/protocol-MCP-00B4D8?style=flat-square)](https://modelcontextprotocol.io)
-[![Docs](https://img.shields.io/badge/docs-mats2208.github.io-4051B5?style=flat-square&logo=materialformkdocs&logoColor=white)](https://mats2208.github.io/MCP-Packet-Tracer/)
-[![Website](https://img.shields.io/badge/website-mcpnetwork.top-0A66C2?style=flat-square&logo=googlechrome&logoColor=white)](https://www.mcpnetwork.top)
-[![License](https://img.shields.io/github/license/Mats2208/MCP-Packet-Tracer?style=flat-square&color=green)](https://github.com/Mats2208/MCP-Packet-Tracer/blob/main/LICENSE)
-[![MCP Registry](https://lobehub.com/badge/mcp/mats2208-mcp-packet-tracer)](https://lobehub.com/mcp/mats2208-mcp-packet-tracer)
+<sub>Pasang otomatis melalui asisten AI Anda: <i>"Install the Packet Tracer MCP from https://github.com/Masmas99/MCP-Packet-Tracer.git and set everything up for me."</i></sub>
+
+<br/>
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Masmas99%2FMCP--Packet--Tracer-181717?style=flat-square&logo=github)](https://github.com/Masmas99/MCP-Packet-Tracer)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![Protocol](https://img.shields.io/badge/Protocol-Model_Context_Protocol_(MCP)-00B4D8?style=flat-square)](https://modelcontextprotocol.io)
+[![Cisco Packet Tracer](https://img.shields.io/badge/Cisco_PT-8.2_--_9.0.1+-049fd9?style=flat-square&logo=cisco&logoColor=white)](https://www.netacad.com/courses/packet-tracer)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+<br/>
 
 <table>
 <tr>
-<td align="center"><strong>79</strong><br/><sub>MCP tools</sub></td>
-<td align="center"><strong>6</strong><br/><sub>MCP resources</sub></td>
-<td align="center"><strong>3</strong><br/><sub>MCP prompts</sub></td>
-<td align="center"><strong>74</strong><br/><sub>device models</sub></td>
-<td align="center"><strong>150</strong><br/><sub>modules</sub></td>
-<td align="center"><strong>15</strong><br/><sub>cable types</sub></td>
+<td align="center"><strong>98</strong><br/><sub>Alat MCP (Tools)</sub></td>
+<td align="center"><strong>6</strong><br/><sub>Resource MCP</sub></td>
+<td align="center"><strong>3</strong><br/><sub>Prompt Pintar</sub></td>
+<td align="center"><strong>74+</strong><br/><sub>Model Perangkat</sub></td>
+<td align="center"><strong>150+</strong><br/><sub>Modul Perangkat</sub></td>
+<td align="center"><strong>15</strong><br/><sub>Tipe Kabel Jaringan</sub></td>
 </tr>
 </table>
 
@@ -29,340 +34,226 @@
 
 ---
 
-## Video
+## 📺 Cuplikan Demonstrasi (*Showcase*)
 
 <p align="center">
-  <a href="https://youtu.be/RthD8h0CEhQ">
-    <img src="https://raw.githubusercontent.com/Mats2208/MCP-Packet-Tracer/main/demo/video-thumbnail.jpg" alt="Watch on YouTube: one sentence builds a full network in Packet Tracer" width="720"/>
-  </a>
+  <img src="demo/live-deploy.gif" alt="Live deploy topologi dari prompt bahasa manusia ke Cisco Packet Tracer" width="800"/>
 </p>
-<p align="center"><sub>▶ <a href="https://youtu.be/RthD8h0CEhQ">Watch on YouTube</a> (6 min): install, how it works, and three live examples. Spanish narration, English subtitles.</sub></p>
-
-## Showcase
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Mats2208/MCP-Packet-Tracer/main/demo/live-deploy.gif" alt="Live deploy — from a natural-language prompt to a running topology in Packet Tracer" width="720"/>
-</p>
-<p align="center"><sub>From a prompt to a running topology in Packet Tracer, in real time</sub></p>
+<p align="center"><em>Dari teks prompt bahasa manusia langsung menjadi topologi aktif yang terkonfigurasi di Cisco Packet Tracer secara real-time.</em></p>
 
 <table>
 <tr>
 <td width="50%">
-<p align="center"><img src="https://raw.githubusercontent.com/Mats2208/MCP-Packet-Tracer/main/demo/topology-screenshot.png" alt="3-router OSPF topology deployed to Packet Tracer" width="100%"/></p>
-<p align="center"><sub>3 routers, OSPF, DHCP and 6 PCs — planned and deployed by the agent</sub></p>
+<p align="center"><img src="demo/topology-screenshot.png" alt="Topologi OSPF 3 Router di Packet Tracer" width="100%"/></p>
+<p align="center"><strong>Topologi Otomatis</strong><br/><sub>3 Router dengan dynamic routing OSPF, DHCP pool, dan 6 PC yang dibuat dan dirapikan otomatis oleh AI.</sub></p>
 </td>
 <td width="50%">
-<p align="center"><img src="https://raw.githubusercontent.com/Mats2208/MCP-Packet-Tracer/main/demo/cli-config.png" alt="Generated IOS CLI configs" width="100%"/></p>
-<p align="center"><sub>The IOS configuration it generates and applies</sub></p>
+<p align="center"><img src="demo/cli-config.png" alt="Konfigurasi Cisco IOS CLI Otomatis" width="100%"/></p>
+<p align="center"><strong>Sintaks IOS CLI Asli</strong><br/><sub>Skrip konfigurasi Cisco IOS yang digenerate secara sintaksis dan di-push langsung ke terminal konsol router/switch.</sub></p>
 </td>
 </tr>
 </table>
 
 ---
 
-## How it works
+## 🧠 Cara Kerja Sistem (*System Architecture*)
+
+Sistem ini bekerja dengan menghubungkan **Model Context Protocol (MCP)** dari AI Coding Agent (seperti Claude Code, Cursor, Antigravity, OpenCode, atau Codex) ke **Cisco Packet Tracer** melalui jembatan komunikasi lokal yang aman (*authenticated loopback HTTP bridge* dan *fallback file mailbox*):
+
+```mermaid
+flowchart TD
+    User["👤 Pengguna / Teknisi Jaringan<br/>'Buat topologi 3 Router OSPF dengan DHCP dan 6 PC'"] --> Agent["🤖 AI Coding Agent<br/>(Claude Code, Antigravity, Cursor, Codex)"]
+    
+    subgraph MCP_Layer ["⚡ Paket Tracer MCP Server (Python)"]
+        Agent --> Tools["98 pt_* Tools<br/>(Planning, Validation, CLI, Inspection)"]
+        Tools --> Core["Planner & Rules Engine<br/>- Alokasi IP / Subnetting<br/>- Validasi Topologi & Kabel<br/>- Generator Skrip JS & Config IOS"]
+    end
+    
+    subgraph Bridge_Layer ["🔒 Secure Local Bridge"]
+        Core --> HTTP["Local HTTP Bridge<br/>(127.0.0.1:54321 + Token Otentikasi)"]
+        Core --> FileMB["Fallback File Mailbox<br/>(Bekerja meski window ekstensi tertutup)"]
+    end
+    
+    subgraph PT_Layer ["🖥️ Cisco Packet Tracer Environment"]
+        HTTP --> Ext["MCP Control Center (.pts)<br/>Ekstensi Script Engine Packet Tracer"]
+        FileMB --> Ext
+        Ext --> Canvas["🎨 Canvas & Device Simulation<br/>- Perangkat diletakkan otomatis<br/>- Kabel dihubungkan secara presisi<br/>- Konfigurasi CLI diinjeksi ke perangkat<br/>- Simulasi paket PDU / Ping dijalankan"]
+    end
+
+    Canvas --> Feedback["📊 Umpan Balik Hasil Nyata<br/>Ping result, Routing table, Wireshark trace, Status Port"]
+    Feedback --> Agent
+```
+
+---
+
+## ✨ Fitur-Fitur Utama (*Key Capabilities*)
+
+| Kategori | Deskripsi Kemampuan | Contoh Tools Utama |
+| :--- | :--- | :--- |
+| 🏗️ **Pembangunan Topologi** | Merancang dari nol, auto-layout rapi, validasi kabel, hingga eksekusi live ke kanvas Packet Tracer. | `pt_full_build`, `pt_plan_topology`, `pt_validate_plan`, `pt_live_deploy` |
+| 🌐 **Subnetting & Addressing** | Alokasi subnet /24, /30 point-to-point, DHCP Server di Router atau Server-PT, serta dukungan IPv6 Dual Stack. | `pt_configure_dhcp_server`, `pt_host_ip_config` |
+| 🔀 **Routing Protokol** | Konfigurasi Static Route (Floating backup), OSPF multi-area, EIGRP, RIP, BGP, HSRP Redundancy, dan QoS. | `pt_apply_hsrp`, `pt_apply_bgp`, `pt_apply_qos`, `pt_read_routes` |
+| ⚡ **Switching & VLAN** | VLAN Access/Trunk 802.1Q, Router-on-a-Stick, STP (Spanning Tree), Port Security, EtherChannel, dan Wi-Fi Access Point. | `pt_apply_vlan`, `pt_apply_stp`, `pt_apply_port_security`, `pt_apply_etherchannel` |
+| 📞 **VoIP / IP Telephony** | Cisco CallManager Express (CME) pada router 2811 dengan registrasi IP Phone (Cisco 7960) dan dial-peer. | `pt_apply_voice` |
+| 🛡️ **Keamanan & Firewall** | Standard & Extended ACL, Dynamic/Static NAT, Hardening perangkat (SSH, secret, banner), dan Audit Keamanan live. | `pt_apply_acl`, `pt_apply_nat`, `pt_apply_hardening`, `pt_audit_security` |
+| 💻 **Interaksi Terminal** | Mengetik langsung di CLI router/switch, Command Prompt PC (`ping`, `tracert`), browser web, dan mail client. | `pt_cli`, `pt_host_command`, `pt_web_browser`, `pt_server_*` |
+| 🔍 **Diagnostik & Forensik** | Inspeksi tabel rute, status OSPF neighbor, ARP cache, MAC table, DHCP leases, dan capture Wireshark Packet Tracer. | `pt_verify_connectivity`, `pt_health_check`, `pt_diff`, `pt_inspect_ports` |
+| 📄 **Pelaporan Formal Otomatis** | Ekspor laporan teknis rapi format `.docx` dan `.doc` dengan tipografi Times New Roman murni, diagram, dan tabel. | Skill `formal-report-generator` |
+
+---
+
+## 🛠️ Panduan Instalasi (*Installation Guide*)
+
+### Prasyarat Sistem:
+- **Cisco Packet Tracer**: Versi **8.2**, **8.2.2**, **9.0**, atau **9.0.1** (Windows, macOS, atau Linux).
+- **Python**: Versi **3.11+** atau manajer paket cepat **`uv`**.
+
+---
+
+### Cara 1: Instalasi Otomatis via AI Agent (Paling Mudah)
+Buka terminal AI Coding Agent Anda (Claude Code, Antigravity, Cursor, Codex, dll.) lalu cukup ketikkan perintah:
 
 ```text
-"3 routers, OSPF and DHCP"
-        │
-        ▼
-  Your AI agent ──── Claude Code, OpenCode, Codex, Cursor… (any MCP client)
-        │  calls pt_* tools
-        ▼
-  Packet Tracer MCP ─ plans → validates → auto-fixes → generates JS + IOS config
-        │  authenticated HTTP bridge, 127.0.0.1:54321
-        ▼
-  MCP Control Center ─ this project's PT extension, polls the bridge every 500 ms
-        │  runs the JavaScript in PT's Script Engine
-        ▼
-  Cisco Packet Tracer ─ devices, cables and configs appear on the canvas
+Install the Packet Tracer MCP from https://github.com/Masmas99/MCP-Packet-Tracer.git and set everything up for me.
 ```
 
-With the extension window closed, a file mailbox takes over, so PT keeps executing.
-Everything stays on your machine: the bridge only listens on loopback and every call
-carries a per-machine token (see [Security](#security)).
+AI akan mendeteksi sistem operasi Anda, mengunduh repositori, menginstal server MCP dan dependensi Python, serta menempatkan ekstensi Packet Tracer di folder yang tepat.
 
-## What it can do
+---
 
-| | What | Tools |
-|---|---|---|
-| **Build** | One prompt → plan → validation → auto-fix → live deploy, with read-back of every device and link | `pt_full_build`, `pt_plan_topology`, `pt_validate_plan`, `pt_fix_plan`, `pt_live_deploy` |
-| **Addressing** | /24 LANs, /30 point-to-point links, DHCP pools on routers or on a dedicated Server-PT, IPv6 dual stack | `pt_configure_dhcp_server`, `dual_stack=True` |
-| **Routing** | Static (with floating backups), OSPF, EIGRP, RIP; HSRP, BGP and QoS on a live router | generated IOS, applied live; `pt_apply_hsrp`, `pt_apply_bgp`, `pt_apply_qos` |
-| **Switching** | VLANs, trunks, router-on-a-stick, STP, port security, EtherChannel, AP SSID and MAC filter | `pt_apply_vlan`, `pt_apply_stp`, `pt_apply_port_security`, `pt_apply_etherchannel`, `pt_wireless_ap` |
-| **Voice** | Cisco CME on a 2811 with IP phones that register (measured with a PoE 3560 and two 7960) | `pt_apply_voice` |
-| **Security** | ACLs, NAT, device hardening (SSH, local users, `enable secret`, banner) and an audit of the **live** config | `pt_apply_acl`, `pt_apply_nat`, `pt_apply_hardening`, `pt_audit_security` |
-| **Inside each device** | Type in a router's CLI tab, run `ping`/`ipconfig` on a PC, configure Server-PT DHCP/DNS/HTTP/FTP/EMAIL, use the Web Browser and Email apps | `pt_cli`, `pt_host_command`, `pt_server_*`, `pt_web_browser` |
-| **Verify** | Real ping with parsed results, health check, plan-vs-live diff, per-port inspection; every CLI change reports which IOS lines were rejected; structured reads of routes, OSPF, ARP, CDP, STP, ACL, NAT, MAC tables and DHCP leases | `pt_verify_connectivity`, `pt_health_check`, `pt_diff`, `pt_inspect_ports`, `pt_read_routes`, `pt_read_ospf`, … |
-| **Explain** | Send a simple PDU, step the simulation and read PT's own per-layer decision log for each packet | `pt_send_pdu`, `pt_simulation_mode`, `pt_simulation_step`, `pt_read_packet_trace` |
-| **Document** | Canvas screenshots, notes and drawings on the canvas, `.pkt` save/open, config backup, exported plans and configs | `pt_screenshot`, `pt_add_note`, `pt_save_project`, `pt_backup_config`, `pt_export` |
+### Cara 2: Instalasi Manual (Langkah demi Langkah)
 
-All 98 tools are listed in the **[tool reference](https://mats2208.github.io/MCP-Packet-Tracer/tools/)**.
+#### 1. Pasang Manajer Paket `uv`
+`uv` menyediakan runtime Python independen tanpa mengganggu instalasi sistem:
+* **Windows (PowerShell)**:
+  ```powershell
+  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  ```
+* **macOS / Linux**:
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
 
-## Installation
+#### 2. Kloning Repositori
+```bash
+git clone https://github.com/Masmas99/MCP-Packet-Tracer.git
+cd MCP-Packet-Tracer
+```
 
-Needs Cisco Packet Tracer 8.2+ (tested on 9.0 and 9.0.1) on Windows or macOS — see [Platforms](#platforms).
+#### 3. Daftarkan Server MCP ke Client Anda
+* **Untuk Claude Code (Windows PowerShell)**:
+  ```powershell
+  claude mcp add --scope user --transport stdio packet-tracer "--" uvx --from . packet-tracer-mcp --stdio
+  ```
+* **Untuk Claude Code (macOS / Linux)**:
+  ```bash
+  claude mcp add --scope user --transport stdio packet-tracer -- uvx --from . packet-tracer-mcp --stdio
+  ```
+* **Untuk Antigravity / Cursor / VSCode (`mcp_config.json`)**:
+  ```json
+  {
+    "mcpServers": {
+      "packet-tracer": {
+        "command": "uvx",
+        "args": ["--from", "C:/laragon/www/mcp-to-cisco", "packet-tracer-mcp", "--stdio"]
+      }
+    }
+  }
+  ```
 
-### The easy way: ask your AI agent
+#### 4. Pasang Ekstensi Packet Tracer (`MCP-Control-Center.pts`)
+1. Salin file **`MCP-Control-Center.pts`** yang ada di repositori ini.
+2. Buka folder ekstensi Packet Tracer Anda:
+   - **Windows**: `C:\Program Files\Cisco Packet Tracer <versi>\extensions\MCPControlCenter\` (atau di `%USERPROFILE%\Cisco Packet Tracer <versi>\extensions\MCPControlCenter\`).
+   - **macOS**: `/Applications/Cisco Packet Tracer <versi>.app/Contents/extensions/MCPControlCenter/`.
+   - **Linux**: Buka menu **Extensions $\rightarrow$ Scripting $\rightarrow$ Configure PT Script Modules $\rightarrow$ Add...** lalu pilih file `MCP-Control-Center.pts`.
+3. Saat Packet Tracer dibuka kembali dan muncul dialog: *"Detected a new script module... enable?"*, klik **Yes**.
 
-Open Claude Code, OpenCode, Codex or any coding agent and say:
+<p align="center">
+  <img src="demo/install-demo.gif" alt="Pemasangan ekstensi Packet Tracer" width="700"/>
+</p>
+
+---
+
+## 🎯 Contoh Perintah yang Siap Dijalankan (*Real-world Prompts*)
+
+Berikut adalah beberapa contoh instruksi dalam Bahasa Indonesia yang bisa Anda berikan langsung ke AI:
+
+### 1. Membangun Jaringan LAN dengan Dynamic Routing (OSPF)
+> *"Buat topologi 3 Router Cisco 2911 membentuk segitiga redundansi. Hubungkan tiap router dengan kabel serial/gigabit subnet /30. Pasang 1 Switch dan 2 PC di belakang masing-masing router. Aktifkan OSPF area 0 pada semua router dan buat DHCP pool di setiap LAN. Setelah selesai, lakukan tes ping antar PC untuk membuktikan konektivitas."*
+
+### 2. Konfigurasi Inter-VLAN Routing (Router-on-a-Stick) & ACL Firewall
+> *"Buat topologi Router-on-a-Stick menggunakan 1 Router 2911 dan 1 Switch 2960. Buat VLAN 10 untuk Keuangan dan VLAN 20 untuk Server Web. Aktifkan trunk 802.1Q dan buat sub-interface G0/0.10 serta G0/0.20. Terapkan Extended ACL di router untuk memblokir akses HTTP dari VLAN 10 ke Server Web di VLAN 20, lalu verifikasi dengan capture paket Wireshark di Packet Tracer."*
+
+### 3. Troubleshooting & Analisis Failover Rute (Tracert)
+> *"Simulasikan jalur Jakarta ke Surabaya melalui jalur utama Router 2 dan jalur cadangan Router 4. Jalankan perintah tracert dari PC Jakarta ke PC Surabaya. Kemudian putuskan interface jalur utama (shutdown), jalankan tracert kembali, dan jelaskan mengapa rute otomatis beralih ke jalur cadangan."*
+
+---
+
+## 📊 Alur Kerja Pelaporan Otomatis (*Formal Report Skill*)
+
+Repositori ini telah dilengkapi dengan skill bawaan **`formal-report-generator`** yang menjamin setiap praktikum atau simulasi langsung menghasilkan laporan rapi dalam format Word (`.docx` dan `.doc`):
+
+```mermaid
+flowchart LR
+    A["🛠️ Simulasi / Lab Selesai"] --> B["📸 Ambil Evidence Nyata<br/>(1 Gambar Topologi, CLI, Tracert, Wireshark)"]
+    B --> C["📝 Generate Laporan Akademik<br/>- 100% Times New Roman<br/>- Monokrom Murni (#000000)<br/>- Flowchart Zero-Overlap"]
+    C --> D["📁 Ekspor File Langsung<br/>Laporan_Praktikum.docx<br/>Laporan_Praktikum.doc"]
+```
+
+---
+
+## 📂 Struktur Repositori
 
 ```text
-Install the Packet Tracer MCP from https://github.com/Mats2208/MCP-Packet-Tracer and set everything up for me.
+MCP-Packet-Tracer/
+├── .agents/                        # Konfigurasi skill & aturan agen otomatis
+│   ├── rules/auto_report.md        # Aturan wajib pelaporan rapi dan monokrom
+│   └── skills/                     # Skill pelaporan formal bawaan workspace
+├── demo/                           # Aset visual, banner, screenshot, dan gif demo
+├── docs/                           # Dokumentasi teknis lengkap dan panduan tool
+├── EXTENSION/                      # Source code ekstensi JavaScript Packet Tracer
+│   ├── script-engine/main.js       # Runtime pengontrol API internal Packet Tracer
+│   └── webview/                    # Tampilan antarmuka HTML/JS Control Center
+├── skills/                         # Skill resmi formal-report-generator
+│   └── formal-report-generator/    # Skrip pembantu dokumen Word & template
+├── src/packet_tracer_mcp/          # Inti server Python Model Context Protocol
+│   ├── adapters/mcp/tools/         # Implementasi 98 tools pt_* (ACL, OSPF, VLAN, dll.)
+│   ├── domain/                     # Logika perencanaan topologi & aturan validasi
+│   └── infrastructure/             # Jembatan HTTP loopback & eksekutor perintah
+├── tests/                          # Rangkaian pengujian unit test dan regresi
+├── AGENTS.md                       # Panduan teknis perilaku agen coding AI
+├── MCP-Control-Center.pts          # Ekstensi siap pakai untuk Cisco Packet Tracer
+├── pyproject.toml                  # Konfigurasi dependensi project Python
+└── README.md                       # Dokumentasi utama proyek
 ```
 
-That's it. The agent finds its instructions here, checks your OS and agent, installs the server and the
-skill, and puts the extension where Packet Tracer finds it. The next time you open Packet Tracer it asks
-*"detected a new script module… enable?"* — click **Yes**. That click is the only thing you do by hand.
+---
 
-> [!NOTE]
-> **AI agent reading this?** Don't follow the manual steps below. Follow
-> [`llms-install.md`](llms-install.md) — it is written for you: OS detection, every client's registration
-> command, the skill, the extension, and how to verify with the user.
+## 🔒 Keamanan (*Security*)
 
-### Manual install
+- **Loopback Only**: Server jembatan komunikasi hanya mengikat ke alamat lokal `127.0.0.1` dan menolak seluruh koneksi jaringan eksternal.
+- **Token Otentikasi Acak**: Setiap sesi komunikasi dilindungi dengan token acak (*per-machine bridge token*) yang disimpan di direktori terproteksi `%LOCALAPPDATA%` pengguna.
+- **Tanpa f-string JavaScript Mentah**: Seluruh argumen perintah diproses melalui enkapsulasi JSON yang ketat untuk mencegah injeksi kode (*code injection*) pada Script Engine Cisco Packet Tracer.
 
-**1. Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/)** — it brings its own Python, so
-you don't need to install Python or touch PATH.
+---
 
-_macOS · Linux:_ `curl -LsSf https://astral.sh/uv/install.sh | sh`
-_Windows (PowerShell):_ `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
+## 🤝 Kontribusi
 
-**2. Connect your MCP client** (Claude Code shown; other clients in the
-[Installation docs](https://mats2208.github.io/MCP-Packet-Tracer/installation/))
+Kontribusi kode, penambahan model perangkat baru, perbaikan bug, atau penyempurnaan dokumentasi sangat disambut baik!
+1. Fork repositori ini ke akun Anda: `https://github.com/Masmas99/MCP-Packet-Tracer.git`
+2. Buat branch fitur baru (`git checkout -b feature/FiturBaru`)
+3. Jalankan pengujian: `python -m pytest`
+4. Commit perubahan Anda (`git commit -m "feat: Menambahkan fitur X"`)
+5. Push ke branch Anda (`git push origin feature/FiturBaru`)
+6. Buat **Pull Request** baru.
 
-```bash
-claude mcp add --scope user --transport stdio packet-tracer -- uvx packet-tracer-mcp --stdio
-```
+---
 
-_Windows PowerShell_ — quote the `--` separator, or PowerShell swallows it and Claude aborts with `error: unknown option '-m'`:
+## 📄 Lisensi
 
-```powershell
-claude mcp add --scope user --transport stdio packet-tracer "--" uvx packet-tracer-mcp --stdio
-```
-
-Verify with `claude mcp list` (look for `packet-tracer … ✓ Connected`).
-
-**3. Install the Agent Skill** — _required in practice: without it the AI guesses model, port and API names
-instead of discovering them_
-
-```bash
-uvx packet-tracer-mcp install-skill                         # Claude Code, OpenCode → ~/.claude/skills
-uvx packet-tracer-mcp install-skill --dest ~/.agents/skills # Codex
-```
-
-Then restart your agent (or run `/reload-skills` in Claude Code). Details →
-**[Skill docs](https://mats2208.github.io/MCP-Packet-Tracer/skill/)**.
-
-**4. Install the live-deploy extension** — Download **`MCP-Control-Center.pts`** from
-[**Releases**](https://github.com/Mats2208/MCP-Packet-Tracer/releases/latest) and drop it in Packet
-Tracer's own `extensions` folder, in a subfolder (`…/extensions/MCPControlCenter/`). On macOS that is
-`Cisco Packet Tracer <version>.app/Contents/extensions/`; on Windows
-`C:\Program Files\Cisco Packet Tracer <version>\extensions\` (needs admin). Next time PT starts it
-asks *"detected a new script module… enable?"* — click **Yes**. Or add it by hand with
-**Extensions → Scripting → Configure PT Script Modules → Add…**. Full walkthrough in [Live deploy](#live-deploy) below.
-
-> **v0.6.0+ requires V5.** The bridge authenticates with a per-machine token that the V5 extension reads automatically; builds before V5 can't authenticate.
-
-<details>
-<summary>Prefer pip?</summary>
-
-```bash
-pip install packet-tracer-mcp            # then use `python -m packet_tracer_mcp --stdio` as the command
-pip install "packet-tracer-mcp[ui]"      # Windows: adds UI mode (opening and capturing device windows)
-```
-
-Requires Python 3.11+. On macOS (Homebrew) and recent Linux distros a plain `pip install` is refused
-(`externally-managed-environment`, PEP 668): use `uv` as above, or a virtualenv. With `uv`, UI mode is
-`uvx --from "packet-tracer-mcp[ui]" packet-tracer-mcp --stdio`.
-
-From source, to modify it: `git clone https://github.com/Mats2208/MCP-Packet-Tracer && cd MCP-Packet-Tracer && pip install -e .`
-</details>
-
-## Quick start
-
-Restart your agent after installing, open **Extensions → MCP BUILDER** in Packet Tracer, and ask:
-
-> *"Create a network with 1 switch and 2 PCs, deploy it to Packet Tracer and ping between the PCs."*
-
-> *"Build 3 routers in a triangle with OSPF, a LAN with 2 PCs behind each one, and DHCP."*
-
-> *"Check the network: show me R1's routing table and audit the security of every router."*
-
-The agent calls `pt_full_build` (plan → validate → generate → deploy), then verifies with a real
-ping. More in the **[Quick Start guide](https://mats2208.github.io/MCP-Packet-Tracer/quickstart/)**.
-
-## Platforms
-
-| | Windows | macOS | Linux |
-|---|---|---|---|
-| Install by agent (`llms-install.md`, PT detects the extension) | ✅ | ✅ | ⚠️ server + skill yes; extension added by hand |
-| Server (`uvx packet-tracer-mcp`) | ✅ | ✅ | ✅ |
-| Live deploy (HTTP bridge) | ✅ | ✅ | ✅ |
-| File-bridge (extension window closed) | ✅ | ✅ | ✅ |
-| Device panel (`pt_cli`, `pt_host_command`, services…) | ✅ | ✅ | ✅ |
-| UI mode (open/capture device windows) | ✅ | — | — |
-
-macOS was verified end to end on Packet Tracer 9.0.1: all 79 tools were run against a live
-canvas, and the bugs that run found are fixed in this release. Windows 11 was verified the same
-day on PT 9.0.1: the agent install (extension copied to `Program Files`, one UAC prompt, PT's
-"enable?" dialog), both bridge channels on the first call, OSPF + DHCP builds checked with real
-pings, and UI mode capturing device windows.
-
-Linux was verified on 2026-11-03 with Ubuntu 26.04.1 LTS (kernel 7.0, GNOME 50 on Wayland),
-Packet Tracer 9.0.1 from Cisco's `.deb`, `packet-tracer-mcp` 0.11.0 through `uvx` (uv 0.13.3)
-and Claude Code 2.1.317 as the client. Both bridge channels connected (PT's webview is
-QtWebEngine 6.8.7). Checked live: `pt_full_build` single LAN (4/4 devices, 3/3 links, DHCP lease)
-and 3 routers with OSPF + DHCP (12/12, 12/12, 6 neighbours FULL, no convergence gaps), real pings
-across LANs, `pt_cli`, `pt_host_command`, `pt_host_ip_config`, Server-PT HTTP / DNS / EMAIL,
-`pt_web_browser`, `pt_health_check`, `pt_screenshot`, `pt_save_project`, and with the extension
-window closed the file-bridge alone ran pings, CLI, add device + link and a DHCP lease.
-Linux specifics:
-
-- PT ships as an AppImage in `/opt/pt`, so there is no `extensions` folder to drop the module
-  into: add `MCP-Control-Center.pts` with **Extensions → Scripting → Configure PT Script Modules → Add…**.
-- Before the first start, accept the EULA by running `packettracer` in a terminal (launched from
-  the menu it waits for an answer it never gets and no window appears). On Ubuntu 26.04 PT also
-  needs `sudo apt install libopengl0 libts0t64`.
-- PT reports `~/Cisco Packet Tracer 9.0.1/saves` as its save folder, which does not exist on Linux
-  (its real user folder is `~/pt`). `pt_save_project` without `directory` now falls back to
-  `~/pt/saves` instead of hitting PT's "No Write Permission" dialog.
-
-## Live deploy
-
-Live deploy runs through this project's own Packet Tracer extension, the **MCP Control Center**
-(`MCP-Control-Center.pts` in [Releases](https://github.com/Mats2208/MCP-Packet-Tracer/releases/latest)). Add it
-once via **Extensions → Scripting → Configure PT Script Modules → Add…**, then open
-**Extensions → MCP BUILDER** in each session. It connects to the bridge by itself and reads the
-token from disk — there is nothing to paste or configure.
-
-<p align="center"><img src="https://raw.githubusercontent.com/Mats2208/MCP-Packet-Tracer/main/demo/install-demo.gif" alt="Installing the MCP Control Center extension in Packet Tracer" width="760"/></p>
-<p align="center"><sub>Adding the MCP Control Center extension (V5) to Packet Tracer</sub></p>
-
-📖 Full steps → **[Live Deploy Setup](https://mats2208.github.io/MCP-Packet-Tracer/live-deploy/)**.
-
-## Device panel and UI mode
-
-Once a topology is live, the agent works inside each device the way a student would: it types in
-a router's **CLI** tab, runs commands in a PC's **Command Prompt**, sets **IP Configuration**,
-browses with the **Web Browser** and configures a server's **Services** — all through Packet
-Tracer's own API, so what it types shows up in the real CLI tab and you can take over at any time.
-
-It is **headless by default**. On Windows, say *"show it in Packet Tracer"* (or call
-`pt_ui_mode("ui")`) and every panel tool also opens the device's window on the matching tab;
-`capture=True` saves a PNG. Windows are driven with UI Automation and a click posted to the
-canvas — your real mouse and keyboard are never used.
-
-## Clients
-
-Any MCP client drives this server — Claude Code, Cursor, Claude Desktop, VS Code with
-Copilot, Codex. Nothing in it is client-specific.
-
-There is also one built **on** it: **[PacketSmith](https://github.com/Mats2208/packetsmith)**,
-a terminal app that runs these tools with the network drawn beside the conversation — a
-fabric tree and a canvas plan derived from the `pt_*` results themselves, so a device the
-model *says* it created but did not never shows up.
-
-| | This server alone | This server + PacketSmith |
-|---|---|---|
-| Where you talk | the MCP client you already use | a terminal app built for this one job |
-| What you see | a chat log, plus PT in another window | split screen: reply left, live topology right |
-| Topology | read out of the tool output | fabric tree and canvas plan, drawn for you |
-| Tools loaded | every MCP server you have configured | this one only — measurably faster to start |
-| Engine | whatever your client speaks | Claude, or ~150 providers |
-
-**You need this server either way** — PacketSmith runs it underneath, and its setup installs
-it for you. If you already live in Claude Code, you are done here; the client is for when you
-want the topology in front of you instead of buried in a scrollback.
-
-```bash
-npm i -g packetsmith    # beta · MIT
-```
-
-## Credits & Acknowledgements
-
-Live deploy runs through **our own Packet Tracer extension** — the **MCP Control
-Center** (the `.pts` in [Releases](https://github.com/Mats2208/MCP-Packet-Tracer/releases/latest)).
-Its Script-Engine helper layer was **inspired by**
-**[PTBuilder](https://github.com/kimmknight/PTBuilder)** by
-**Kim Knight ([@kimmknight](https://github.com/kimmknight))**, who pioneered driving
-Packet Tracer's Script Engine from JavaScript — thanks for the groundwork. 🙏
-
-> PTBuilder and Packet Tracer MCP are **separate, independent projects**. You install
-> *our* extension, not PTBuilder. Full
-> **[Credits & Attribution](https://mats2208.github.io/MCP-Packet-Tracer/credits/)**.
-
-## Security
-
-Driving Packet Tracer from outside means running a local HTTP bridge whose whole
-job is to hand JavaScript to PT's Script Engine — code that executes with PT's
-own privileges, including disk access. That makes the bridge a genuine attack
-surface, not an implementation detail, and it is hardened accordingly.
-
-**The attack this design exists to stop.** Binding to `127.0.0.1` is *not* a
-security control. A `POST` with `Content-Type: text/plain` is a CORS *simple
-request*: any web page open in your browser can send it to a loopback port
-without a preflight and without needing to read the response. An unauthenticated
-bridge therefore lets any website you visit — while Packet Tracer happens to be
-open — queue arbitrary code inside it. Injection never needed to read anything
-back, so same-origin policy alone never closed this.
-
-What actually closes it is a secret the attacking page cannot guess:
-
-| Control | Implementation |
-|---|---|
-| **Token on every endpoint** | Every route except `/ping` requires a shared token (`?t=` or `X-PT-Token`). Compared with `hmac.compare_digest` — constant time, no early-exit oracle. |
-| **`/ping` leaks nothing** | Deliberately unauthenticated so the server can tell *who owns the port* before trusting it — but it returns only a SHA-256 **fingerprint** of the token, never the token. |
-| **Foreign-bridge detection** | Before sending any payload, the server checks that `/ping` identity matches its own token fingerprint. If a stranger holds the port, it refuses to hand code to it instead of blindly trusting a `200`. |
-| **DNS-rebinding defense** | The `Host` header is validated against `127.0.0.1` / `localhost` / `[::1]` + the real port. A rebound request arrives as `Host: evil.com:<port>` and is rejected. |
-| **Loopback bind** | `ThreadingHTTPServer(("127.0.0.1", port))` — never `0.0.0.0`, so the bridge is not reachable from the LAN. |
-| **Token at rest** | `secrets.token_urlsafe(32)`, created with `O_EXCL` (race-safe when two servers start at once) at mode `0o600`, under `%LOCALAPPDATA%` on Windows — deliberately *not* roaming `%APPDATA%`, so a loopback secret never syncs to a file server. |
-| **Body size cap** | Oversized bodies are rejected with `413` and are **not** read into memory. |
-| **Silent failures** | Error responses carry no CORS headers, so a hostile page cannot even distinguish *why* it failed. |
-| **Tamper visibility** | Unauthorized attempts are counted and surfaced by `pt_bridge_status`, so a stale or rogue client is diagnosable instead of silent. |
-
-Regression coverage lives in [`tests/test_bridge_security.py`](https://github.com/Mats2208/MCP-Packet-Tracer/blob/main/tests/test_bridge_security.py)
-and [`tests/test_injection_regressions.py`](https://github.com/Mats2208/MCP-Packet-Tracer/blob/main/tests/test_injection_regressions.py);
-the full suite runs offline with `python -m pytest` — no Packet Tracer required.
-
-> **v0.6.0+ requires the V5 extension.** Versions before v0.6.0 shipped an
-> unauthenticated bridge and are vulnerable to exactly the attack above.
-> **Upgrade — there is no safe configuration of the old bridge.**
-
-**Deliberate, documented behaviour:** `pt_send_raw` executes arbitrary JavaScript
-inside Packet Tracer by design — it is the escape hatch for exploring the IPC
-API. It is reachable only by an MCP client you have already authorised, over the
-authenticated bridge. That is a capability, not a vulnerability.
-
-Found a vulnerability? Report it privately via
-[GitHub Security Advisories](https://github.com/Mats2208/MCP-Packet-Tracer/security/advisories/new),
-not a public issue. [SECURITY.md](https://github.com/Mats2208/MCP-Packet-Tracer/blob/main/SECURITY.md) documents the full threat model.
-
-## What's new
-
-**Unreleased (v0.10.0)** — install it by asking your agent: [`llms-install.md`](https://github.com/Mats2208/MCP-Packet-Tracer/blob/main/llms-install.md)
-walks any coding agent through the whole setup on Windows, macOS or Linux. The skill ships inside
-the package (`uvx packet-tracer-mcp install-skill`), `uvx packet-tracer-mcp` runs the server with no
-Python install, and 17 device-panel tools let the agent work inside each device window.
-
-**v0.9.0** — on PyPI, and a hunt for **silent false OKs**: a topology split into islands that
-validation approved, a bridge returning the previous operation's result, a connectivity "OK" with
-75% packet loss. None of them crashed; all of them lied. Older releases in the
-**[Changelog](https://github.com/Mats2208/MCP-Packet-Tracer/blob/main/CHANGELOG.md)**.
-
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/Mats2208/MCP-Packet-Tracer/blob/main/CONTRIBUTING.md). The
-test suite (1,297 tests) runs offline with `uv run --extra test python -m pytest` — no Packet Tracer needed.
-
-## License
-
-Released under the **[MIT License](https://github.com/Mats2208/MCP-Packet-Tracer/blob/main/LICENSE)** — © 2026 Mateo ([@Mats2208](https://github.com/Mats2208)).
+Proyek ini dilisensikan di bawah lisensi terbuka [MIT License](LICENSE). Anda bebas menggunakannya untuk keperluan riset, tugas kuliah, praktikum laboratorium, maupun pengembangan otomasi jaringan korporat.
 
 <div align="center">
-
-**Built with [MCP](https://modelcontextprotocol.io) · Deploys to [Cisco Packet Tracer](https://www.netacad.com/) · Script-engine logic inspired by [PTBuilder](https://github.com/kimmknight/PTBuilder)**
-
-If this project is useful to you, star it ⭐ and share it with the community.
-
+<sub>Dikelola dengan ❤️ oleh <a href="https://github.com/Masmas99">Masmas99</a> • Dikembangkan di atas protokol standar <a href="https://modelcontextprotocol.io">Model Context Protocol (MCP)</a></sub>
 </div>
