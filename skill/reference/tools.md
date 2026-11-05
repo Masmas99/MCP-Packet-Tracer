@@ -88,7 +88,7 @@ rearranges the live topology by its links and fits it to that view (reply: `shap
 `mismatched`, per-device `positions`). Placing by hand for a specific design: core in the middle, one
 direction per LAN (switch first, hosts beyond it side by side 80-90 px apart), no link drawn through
 another device, nothing outside `usable_x`/`usable_y`.
-Recipe for a diagram worth showing: `pt_full_build` → `pt_add_note` per subnet and link →
+Recipe for a diagram worth showing: `pt_full_build` → `pt_add_note` per subnet along cables (`"NETWORK\n<subnet>/<cidr>"` at link midpoint) and per device directly underneath its icon/label (`y_dev+68`, e.g. `"<host_ip>"` or `"IP ADDRESS PC\n<host_ip>"`) →
 `drawCircle` per LAN → `pt_screenshot` → adjust and repeat.
 **Backup / workspace:** `pt_backup_config(device, include_xml)` (real startup-config + serial,
 config-register, boot images), `pt_project_metadata(description="")` (saved filename, PT version,

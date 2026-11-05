@@ -52,10 +52,35 @@ This skill governs the autonomous creation of high-grade technical, engineering,
 - Include exactly **ONE** topology diagram at the beginning of the report (Bab I / Topologi Jaringan).
 - **Never duplicate** the topology diagram in later chapters or steps. Subsequent images must be specific evidence (CLI outputs, Wireshark captures, or flowcharts).
 
-### Rule 4: Packet Tracer Canvas & Labeling Precision
-- **Subnet Label**: Place network subnet notes along the cable link (e.g., `192.168.10.0/24`).
-- **Host IP Note**: Place the full IP address cleanly and directly underneath the device icon and label (e.g., `192.168.10.2` under `PC-Keuangan`).
-- **Interface / Gateway Note**: Place near the router interface (e.g., `.1 (G0/0)` or `.1 (G0/1) [DOWN]`).
+### Rule 4: Packet Tracer Canvas & Labeling Precision (Mandatory)
+Every topology diagram on Packet Tracer canvas MUST have explicit visual annotations (`pt_add_note`) matching this standard:
+- **Subnet Notes Along Cable Position ("NETWORK\n<Subnet>/<CIDR>")**:
+  - Place network subnet notes strictly along the cable link between devices (at cable midpoint: $x = (x_1 + x_2)/2$, $y = (y_1 + y_2)/2 - 15$).
+  - **Exact Format**: 2 lines, uppercase "NETWORK" followed by the subnet/CIDR:
+    ```text
+    NETWORK
+    192.168.10.0/24
+    ```
+    ```text
+    NETWORK
+    192.168.20.0/24
+    ```
+  - Follow the cable path/post directly as shown in reference topologies.
+- **Host IP Address Under EVERY Device**:
+  - Every single host, PC, Server, and client (`PC-Star1..4`, `PC-Bus1..4`, `Server-Star`, etc.) **MUST** have an IP address annotation placed directly underneath the device icon and name label.
+  - **Position**: $x = x_{dev}$, $y = y_{dev} + 68$ (or $70$) px.
+  - **Exact Format**: The allocated host IP address:
+    ```text
+    192.168.10.2
+    ```
+    or
+    ```text
+    IP ADDRESS PC
+    192.168.10.2
+    ```
+    (Both static and DHCP-leased hosts must show their IP address directly under the device).
+- **Interface / Gateway Note**: Place near router/switch interfaces (e.g., `Gig0/0: .1` or `.1 (G0/0)`).
+- **Topology Title**: Place a centered title at top canvas ($y=25..35$), e.g. `TOPOLOGI HYBRID: STAR & BUS DENGAN INTER-ROUTING`.
 
 ### Rule 5: Zero-Overlap Flowchart Geometry
 When generating diagnostic flowcharts:

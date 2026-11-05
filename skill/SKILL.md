@@ -60,6 +60,7 @@ user to open **Extensions → MCP BUILDER** (or dismiss a stuck error modal).
   Don't move devices afterwards unless asked.
 - After building or extending by hand: **`pt_auto_layout()`** (`apply=False` previews). "needs about
   WxH" = bigger than the view: suggest maximising PT or zooming out.
+- **Canvas annotations (mandatory):** subnet notes along cables (`pt_add_note(x, y, "NETWORK\n<subnet>/<cidr>")` at link midpoint) and full host IP notes directly under every device (`pt_add_note(x, y+68, "<ip>")` or `"IP ADDRESS PC\n<ip>"`).
 
 ### Verify every change, then read it back
 

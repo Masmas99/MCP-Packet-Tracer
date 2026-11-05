@@ -107,6 +107,6 @@ Follow the **`formal-report-generator`** skill located at `skills/formal-report-
 1. **Typography**: Strictly **Times New Roman** exclusively across all elements (Title 14pt, H1 13pt, H2 12pt, Body 12pt, Tables 9.5-10.5pt, Captions 10pt).
 2. **Colors**: **Pure Black (`#000000`)** text and headings ("jangan warna-warni"). Neutral light gray (`#F2F2F2`) table headers with solid black borders.
 3. **Topology Image**: Exactly **ONE** topology diagram at the beginning of the report (Bab I). Never duplicate.
-4. **Packet Tracer Canvas**: Subnet notes along cables, full host IP directly underneath each PC/Server icon and label.
+4. **Packet Tracer Canvas**: (a) Subnet notes placed strictly along the cable link path formatted as `NETWORK\n<Subnet>/<CIDR>` (e.g. `NETWORK\n192.168.10.0/24`); (b) Full IP address annotation placed directly underneath EVERY device (PC/Server/Laptop) icon and label (`pt_add_note` at $y_{dev}+68$, e.g. `192.168.10.2` or `IP ADDRESS PC\n192.168.10.2`); (c) Centered topology title at top.
 5. **Flowcharts**: Zero overlap, minimum 40px spacing between parallel branches, orthogonal lines, Times New Roman labels, monochrome palette.
 6. **Delivery**: Always generate both `.docx` and `.doc` files in `c:\laragon\www\mcp-to-cisco\` and provide direct clickable links (`file:///...`).
