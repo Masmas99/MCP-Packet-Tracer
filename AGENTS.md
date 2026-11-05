@@ -96,3 +96,17 @@ offline half was.
   `try{...}catch{}`.
 - `%LOCALAPPDATA%`, not `%APPDATA%`, for machine-local secrets — the latter
   roams.
+
+## Automatic Reporting Requirement
+
+Whenever an agent completes any task, network simulation, topology build, or troubleshooting exercise in this repository, the agent **MUST automatically generate a formal, neat report in both `.doc` and `.docx` formats** before concluding.
+
+Follow the **`formal-report-generator`** skill located at `skills/formal-report-generator/SKILL.md` (or `.agents/skills/formal-report-generator/SKILL.md`).
+
+**Mandatory Report Rules**:
+1. **Typography**: Strictly **Times New Roman** exclusively across all elements (Title 14pt, H1 13pt, H2 12pt, Body 12pt, Tables 9.5-10.5pt, Captions 10pt).
+2. **Colors**: **Pure Black (`#000000`)** text and headings ("jangan warna-warni"). Neutral light gray (`#F2F2F2`) table headers with solid black borders.
+3. **Topology Image**: Exactly **ONE** topology diagram at the beginning of the report (Bab I). Never duplicate.
+4. **Packet Tracer Canvas**: Subnet notes along cables, full host IP directly underneath each PC/Server icon and label.
+5. **Flowcharts**: Zero overlap, minimum 40px spacing between parallel branches, orthogonal lines, Times New Roman labels, monochrome palette.
+6. **Delivery**: Always generate both `.docx` and `.doc` files in `c:\laragon\www\mcp-to-cisco\` and provide direct clickable links (`file:///...`).
