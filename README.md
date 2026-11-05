@@ -102,6 +102,56 @@ flowchart TD
 
 ---
 
+## Skill Otomasi Pelaporan Formal (formal-report-generator)
+
+Repositori ini telah dibekali dengan modul skill terintegrasi bernama **`formal-report-generator`** yang berlokasi di folder `skills/formal-report-generator/` dan `.agents/skills/formal-report-generator/`. Skill ini mewajibkan agen AI untuk secara mandiri menyusun dokumen laporan laboratorium atau dokumen teknis standar industri dalam format ganda (**`.docx`** dan **`.doc`**) setiap kali sebuah simulasi atau troubleshooting selesai dijalankan.
+
+```mermaid
+flowchart LR
+    A["Simulasi Jaringan Selesai"] --> B["Pengambilan Bukti Diagnostik<br/>(1 Gambar Topologi, CLI, Tracert, Wireshark)"]
+    B --> C["Penyusunan Laporan Standar<br/>- 100% Times New Roman<br/>- Format Monokrom (#000000)<br/>- Flowchart Tanpa Tumpang Tindih"]
+    C --> D["Penyimpanan File Laporan<br/>Laporan_Praktikum.docx<br/>Laporan_Praktikum.doc"]
+```
+
+### Standar Baku Pelaporan (Non-Negotiable Rules):
+
+1. **Tipografi 100% Times New Roman**:
+   - Seluruh elemen teks tanpa kecuali menggunakan font **Times New Roman**:
+     - Judul Utama: 14 pt, Tebal, Rata Tengah
+     - Judul Bab (H1): 13 pt, Tebal, Rata Kiri
+     - Sub-bab (H2): 12 pt, Tebal, Rata Kiri
+     - Isi Paragraf: 12 pt, Normal, Rata Kanan-Kiri (*Justified*), Spasi 1.15
+     - Isi Tabel: 9.5 pt hingga 10.5 pt
+     - Keterangan Gambar / Tabel: 10 pt, Miring (*Italic*), Rata Tengah
+   - Dilarang keras menggunakan font default seperti Calibri, Arial, atau font monospace pada teks paragraf.
+
+2. **Disiplin Warna Monokrom (Tanpa Warna-Warni)**:
+   - Seluruh teks paragraf dan heading wajib menggunakan warna hitam pekat (`#000000`).
+   - Tabel: Baris judul (header) menggunakan latar abu-abu terang netral (`#F2F2F2`) dengan teks hitam tebal dan garis batas tipis solid (`#000000` atau `#CCCCCC`).
+   - Kotak Catatan (*Callout Box*): Latar abu-abu terang (`#F5F5F5`) dengan garis batas tebal hitam di sisi kiri.
+   - Tidak diperkenankan menggunakan teks berwarna biru, merah, hijau, atau latar warna mencolok di dalam laporan.
+
+3. **Aturan 1 Gambar Topologi di Awal Dokumen**:
+   - Gambar diagram topologi Packet Tracer hanya disertakan tepat **satu kali** di awal laporan (Bab I).
+   - Dilarang mengulang gambar topologi di bab-bab selanjutnya; bab pengujian hanya menampilkan screenshot bukti CLI, output ping, tracert, atau capture paket.
+   - Penataan pada kanvas Packet Tracer wajib menyertakan label subnet pada kabel jaringan dan IP lengkap tepat di bawah nama tiap PC atau Server.
+
+4. **Diagram Alur (Flowchart) Tanpa Tumpang Tindih (Zero-Overlap)**:
+   - Diagram diagnostik dirancang dengan jarak aman minimal 40 px antar-cabang paralel.
+   - Setiap percabangan keputusan (*decision diamond*) memiliki kolom koordinat tersendiri agar teks tidak terpotong atau tertutup garis.
+   - Menggunakan jalur garis siku (*orthogonal lines*) dengan panah presisi, font Times New Roman, dan palet monokrom hitam-putih.
+
+5. **Ekspor Ganda Otomatis (.docx dan .doc)**:
+   - Agen secara otomatis menghasilkan sepasang berkas: `.docx` (format Word modern) dan `.doc` (format kompatibilitas lama) langsung di direktori proyek dan menyertakan tautan file yang dapat diklik langsung oleh pengguna.
+
+### Berkas dan Komponen Skill:
+- **Spesifikasi & Panduan Skill**: `skills/formal-report-generator/SKILL.md`
+- **Pustaka Skrip Pembantu Python**: `skills/formal-report-generator/scripts/report_helper.py` (menyediakan fungsi `set_cell_background`, `set_table_borders`, `add_callout`, `render_cmd_window`, dan `render_flowchart`).
+- **Template Dokumen Baku**: `skills/formal-report-generator/templates/report_template.py`
+- **Aturan Permanen Agen**: `.agents/rules/auto_report.md` dan bab khusus di `AGENTS.md`.
+
+---
+
 ## Panduan Instalasi
 
 ### Prasyarat Sistem:
@@ -180,26 +230,13 @@ cd MCP-Packet-Tracer
 Berikut adalah contoh instruksi dalam Bahasa Indonesia yang dapat Anda berikan langsung ke AI:
 
 ### 1. Jaringan Multi-Router dengan Dynamic Routing OSPF
-> *"Buat topologi 3 Router Cisco 2911 membentuk segitiga redundansi. Hubungkan tiap router dengan kabel serial/gigabit subnet /30. Pasang 1 Switch dan 2 PC di belakang masing-masing router. Aktifkan OSPF area 0 pada semua router dan buat DHCP pool di setiap LAN. Setelah selesai, lakukan tes ping antar PC untuk membuktikan konektivitas."*
+> *"Buat topologi 3 Router Cisco 2911 membentuk segitiga redundansi. Hubungkan tiap router dengan kabel serial/gigabit subnet /30. Pasang 1 Switch dan 2 PC di belakang masing-masing router. Aktifkan OSPF area 0 pada semua router dan buat DHCP pool di setiap LAN. Setelah selesai, lakukan tes ping antar PC untuk membuktikan konektivitas dan buatkan laporan rapi format docx."*
 
 ### 2. Inter-VLAN Routing (Router-on-a-Stick) dan Extended ACL
-> *"Buat topologi Router-on-a-Stick menggunakan 1 Router 2911 dan 1 Switch 2960. Buat VLAN 10 untuk Keuangan dan VLAN 20 untuk Server Web. Aktifkan trunk 802.1Q dan buat sub-interface G0/0.10 serta G0/0.20. Terapkan Extended ACL di router untuk memblokir akses HTTP dari VLAN 10 ke Server Web di VLAN 20, lalu verifikasi dengan capture paket Wireshark di Packet Tracer."*
+> *"Buat topologi Router-on-a-Stick menggunakan 1 Router 2911 dan 1 Switch 2960. Buat VLAN 10 untuk Keuangan dan VLAN 20 untuk Server Web. Aktifkan trunk 802.1Q dan buat sub-interface G0/0.10 serta G0/0.20. Terapkan Extended ACL di router untuk memblokir akses HTTP dari VLAN 10 ke Server Web di VLAN 20, lalu verifikasi dengan capture paket Wireshark di Packet Tracer dan buatkan laporan pengujiannya."*
 
 ### 3. Analisis Failover Jalur Redundansi
-> *"Simulasikan jalur Jakarta ke Surabaya melalui jalur utama Router 2 dan jalur cadangan Router 4. Jalankan perintah tracert dari PC Jakarta ke PC Surabaya. Kemudian putuskan interface jalur utama (shutdown), jalankan tracert kembali, dan jelaskan mengapa rute otomatis beralih ke jalur cadangan."*
-
----
-
-## Alur Pelaporan Akademik dan Teknis
-
-Repositori ini dilengkapi dengan skill bawaan **`formal-report-generator`** yang menjamin setiap praktikum atau simulasi langsung menghasilkan laporan rapi dalam format Word (`.docx` dan `.doc`):
-
-```mermaid
-flowchart LR
-    A["Simulasi Jaringan Selesai"] --> B["Pengambilan Bukti Diagnostik<br/>(1 Gambar Topologi, CLI, Tracert, Wireshark)"]
-    B --> C["Penyusunan Laporan Standar<br/>- 100% Times New Roman<br/>- Format Monokrom (#000000)<br/>- Flowchart Tanpa Tumpang Tindih"]
-    C --> D["Penyimpanan File Laporan<br/>Laporan_Praktikum.docx<br/>Laporan_Praktikum.doc"]
-```
+> *"Simulasikan jalur Jakarta ke Surabaya melalui jalur utama Router 2 dan jalur cadangan Router 4. Jalankan perintah tracert dari PC Jakarta ke PC Surabaya. Kemudian putuskan interface jalur utama (shutdown), jalankan tracert kembali, dan jelaskan mengapa rute otomatis beralih ke jalur cadangan dalam laporan teknis."*
 
 ---
 
@@ -217,6 +254,9 @@ MCP-Packet-Tracer/
 │   └── webview/                    # Tampilan antarmuka HTML/JS Control Center
 ├── skills/                         # Skill resmi formal-report-generator
 │   └── formal-report-generator/    # Skrip pembantu dokumen Word & template
+│       ├── scripts/report_helper.py# Pustaka pembantu layout Word & PIL
+│       ├── templates/              # Template dokumen Word baku
+│       └── SKILL.md                # Spesifikasi dan panduan skill laporan
 ├── src/packet_tracer_mcp/          # Inti server Python Model Context Protocol
 │   ├── adapters/mcp/tools/         # Implementasi 98 tools pt_* (ACL, OSPF, VLAN, dll.)
 │   ├── domain/                     # Logika perencanaan topologi & aturan validasi
